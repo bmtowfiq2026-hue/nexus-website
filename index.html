@@ -115,7 +115,7 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
   .nav-links{display:none}
   .features-grid{grid-template-columns:1fr}
   .install-grid{grid-template-columns:1fr}
-  .heo h1{font-size:2rem}
+  .hero h1{font-size:2rem}
 }
 /* Mobile menu */
 .mobile-btn{display:none;background:none;border:none;color:var(--text2);cursor:pointer;padding:4px}
@@ -452,13 +452,11 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
         <div class="terminal-sm">
           <div class="terminal-header"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span></div>
           <div class="terminal-body" style="font-size:12px">
-            <span class="t-gray"># macOS / Linux</span><br>
-            <span class="t-green-l">$</span> cargo install nexus<br><br>
-            <span class="t-gray"># Or clone & build</span><br>
+            <span class="t-gray"># Build from source</span><br>
             <span class="t-green-l">$</span> git clone https://github.com/bmtowfiq2026-hue/Nexus.git<br>
             <span class="t-green-l">$</span> cd Nexus<br>
-            <span class="t-green-l">$</span> cargo build --release<br>
-            <span class="t-green-l">$</span> ./target/release/nexus chat
+            <span class="t-green-l">$</span> bash scripts/build-all.sh<br>
+            <span class="t-green-l">$</span> ./target/release/nexus start
           </div>
         </div>
       </div>
