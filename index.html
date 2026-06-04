@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nexus - Autonomous AI Agent Platform</title>
 <meta name="description" content="Build autonomous AI agents that learn, remember, and grow. Open source, no API keys needed.">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="logo.svg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -128,7 +129,7 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
 
 <nav id="navbar">
   <div class="container">
-    <a href="#" class="logo"><span class="logo-icon">N</span>Nexus</a>
+    <a href="#" class="logo"><img src="logo.svg" alt="Nexus" height="28" style="height:28px"></a>
     <div class="nav-links" id="navLinks">
       <a href="#features">Features</a>
       <a href="#architecture">Architecture</a>
@@ -166,7 +167,7 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
     <div class="hero-btns">
       <a href="#quickstart" class="btn btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        Try Demo Now
+        Get Started
       </a>
       <a href="https://github.com/bmtowfiq2026-hue/Nexus" class="btn btn-outline" target="_blank">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -300,6 +301,23 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
       <h2>Get Started in 30 Seconds</h2>
       <p>No API keys. No accounts. No cloud signup. Just clone, build, and chat.</p>
     </div>
+    <div style="text-align:center;margin-bottom:32px">
+      <div class="terminal" style="max-width:450px">
+        <div class="terminal-header">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <span class="terminal-label">nexus start</span>
+        </div>
+        <div class="terminal-body" style="font-size:13px">
+          <span class="t-green-l">$</span> git clone https://github.com/bmtowfiq2026-hue/Nexus.git<br>
+          <span class="t-green-l">$</span> cd Nexus<br>
+          <span class="t-green-l">$</span> bash scripts/build-all.sh<br>
+          <span class="t-gray"># or: powershell -File scripts/build-all.ps1</span><br>
+          <span class="t-blue">...</span><br>
+          <span class="t-green-l">$</span> ./target/release/nexus start<br>
+          <span class="t-gray"># Opens http://localhost:8080/ automatically</span>
+        </div>
+      </div>
+    </div>
     <div class="install-grid">
       <div class="install-card">
         <h3>macOS / Linux</h3>
@@ -376,6 +394,7 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
         <span class="t-gray">Usage: nexus &lt;COMMAND&gt;</span><br><br>
         <div class="cli-row"><span class="t-green">nexus init [--path]</span><span class="cli-desc">Initialize a Nexus workspace</span></div>
         <div class="cli-row"><span class="t-green">nexus onboard</span><span class="cli-desc">Interactive setup wizard</span></div>
+        <div class="cli-row"><span class="t-green">nexus start</span><span class="cli-desc">Launch agent API + WebChat UI</span></div>
         <div class="cli-row"><span class="t-green">nexus chat [--provider]</span><span class="cli-desc">Start interactive chat</span></div>
         <div class="cli-row"><span class="t-green">nexus run --prompt &lt;text&gt;</span><span class="cli-desc">Execute a single task</span></div>
         <div class="cli-row"><span class="t-green">nexus config show</span><span class="cli-desc">View configuration</span></div>
@@ -452,10 +471,9 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
     <div class="footer-grid">
       <div class="footer-brand">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
-          <div style="width:28px;height:28px;border-radius:6px;background:linear-gradient(135deg,var(--n-500),#a855f7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px">N</div>
-          <span style="font-weight:600">Nexus</span>
+          <img src="logo.svg" alt="Nexus" height="24" style="height:24px">
         </div>
-        <p>An end-to-end autonomous AI agent platform built with Rust and Go. Open source under the MIT License.</p>
+        <p>An end-to-end autonomous AI agent platform built with Rust and Go. Open source under the MIT License. One command to start: <code>nexus start</code>.</p>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
