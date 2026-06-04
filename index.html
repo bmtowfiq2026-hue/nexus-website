@@ -225,8 +225,8 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
         </div>
-        <h3>Multi-Channel Gateway</h3>
-        <p>Connect to Discord, Telegram, Slack, or Web Chat via the Go gateway. Message bus architecture for scalable, distributed deployment.</p>
+        <h3>13-Channel Gateway</h3>
+        <p>Connect to Discord, Telegram, Slack, WebChat, Matrix, IRC, WhatsApp, Signal, Google Chat, MSTeams, LINE, Messenger, or Twilio via the Go gateway. Message bus architecture for scalable, distributed deployment.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -245,8 +245,8 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
     </div>
     <div class="stats-grid">
       <div class="stat-card"><div class="value">Rust + Go</div><div class="label">Built With</div></div>
-      <div class="stat-card"><div class="value">4</div><div class="label">LLM Providers</div></div>
-      <div class="stat-card"><div class="value">4</div><div class="label">Channels</div></div>
+      <div class="stat-card"><div class="value">24</div><div class="label">LLM Providers</div></div>
+      <div class="stat-card"><div class="value">13</div><div class="label">Channels</div></div>
       <div class="stat-card"><div class="value">3</div><div class="label">Memory Layers</div></div>
     </div>
   </div>
@@ -393,11 +393,55 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px}
         <div class="cli-row"><span class="cli-cmd">/doctor</span><span class="cli-desc">Health check</span></div>
       </div>
       <div class="cli-card">
-        <h4>Providers</h4>
-        <div class="cli-row"><span class="cli-cmd">demo</span><span class="cli-desc">No setup needed</span></div>
-        <div class="cli-row"><span class="cli-cmd">openai</span><span class="cli-desc">GPT-4 / GPT-3.5</span></div>
+        <h4>Providers (24)</h4>
+        <div class="cli-row"><span class="cli-cmd">demo</span><span class="cli-desc">No setup</span></div>
+        <div class="cli-row"><span class="cli-cmd">openai</span><span class="cli-desc">GPT-4o</span></div>
         <div class="cli-row"><span class="cli-cmd">anthropic</span><span class="cli-desc">Claude 3</span></div>
+        <div class="cli-row"><span class="cli-cmd">gemini</span><span class="cli-desc">Google Gemini 2.0</span></div>
+        <div class="cli-row"><span class="cli-cmd">deepseek</span><span class="cli-desc">DeepSeek V3</span></div>
+        <div class="cli-row"><span class="cli-cmd">groq</span><span class="cli-desc">Groq LPU</span></div>
+        <div class="cli-row"><span class="cli-cmd">together</span><span class="cli-desc">Together AI</span></div>
         <div class="cli-row"><span class="cli-cmd">ollama</span><span class="cli-desc">Local LLMs</span></div>
+        <div class="cli-row"><span class="cli-cmd" style="color:var(--text3);font-size:12px">... and 16 more</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="downloads" class="section" style="padding-bottom:0">
+  <div class="container">
+    <div class="section-title">
+      <h2>Download</h2>
+      <p>Pre-built binaries for the latest release.</p>
+    </div>
+    <div class="install-grid">
+      <div class="install-card">
+        <h3>Windows (x86_64)</h3>
+        <div class="terminal-sm">
+          <div class="terminal-header"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span></div>
+          <div class="terminal-body" style="font-size:12px">
+            <span class="t-gray"># Download & extract</span><br>
+            <span class="t-green-l">&gt;</span> <a href="https://github.com/bmtowfiq2026-hue/Nexus/releases/download/v0.5.0/nexus-v0.5.0-windows-x86_64.zip" style="color:var(--n-300)">nexus-v0.5.0-windows-x86_64.zip</a> (8.9 MB)<br><br>
+            <span class="t-gray"># Run</span><br>
+            <span class="t-green-l">&gt;</span> .\nexus init<br>
+            <span class="t-green-l">&gt;</span> .\nexus chat
+          </div>
+        </div>
+      </div>
+      <div class="install-card">
+        <h3>Build from Source</h3>
+        <div class="terminal-sm">
+          <div class="terminal-header"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span></div>
+          <div class="terminal-body" style="font-size:12px">
+            <span class="t-gray"># macOS / Linux</span><br>
+            <span class="t-green-l">$</span> cargo install nexus<br><br>
+            <span class="t-gray"># Or clone & build</span><br>
+            <span class="t-green-l">$</span> git clone https://github.com/bmtowfiq2026-hue/Nexus.git<br>
+            <span class="t-green-l">$</span> cd Nexus<br>
+            <span class="t-green-l">$</span> cargo build --release<br>
+            <span class="t-green-l">$</span> ./target/release/nexus chat
+          </div>
+        </div>
       </div>
     </div>
   </div>
